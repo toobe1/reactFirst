@@ -30,8 +30,17 @@ render(){
   }
   return (
     <div className="App">
-      <Subject title={this.state.Subject.title} sub={this.state.Subject.sub}></Subject>
-      <Subject title='e2' sub='sub2'></Subject>
+      {/* <Subject title={this.state.Subject.title} sub={this.state.Subject.sub}></Subject> */}
+        <header>
+          <h1><a href='/' onClick={function(e){
+            e.preventDefault();
+            alert("hi");
+            this.setState({
+              mode:'welcome'
+            });
+          }.bind(this)}>{this.state.Subject.title}</a></h1>
+          {this.state.Subject.sub}
+        </header>
       <Nav data={this.state.contents}></Nav>
       <Content title={_title} desc={_desc}></Content>
     </div>
