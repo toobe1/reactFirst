@@ -34,6 +34,11 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
+    <img class="fullscreen" src="k.jpg">
+    <div class="fullscreen">
+    <hi>풀스크린  </hi>
+    <p>dkfjdkfjdkfjkdjfkdsjf</p>
+    </div>
   </body>
   <script>
   var age =30;
@@ -41,5 +46,19 @@
   alert(age);
   document.write(age);
   console.log(age);
+
+  //배열
+  var userInfo = ["이름", "나이","성별"];
+
+  //전체화면 사용
+  var full = document.querySelectorAll('.fullscreen');
+
+  for (var i = 0; i< full.length; i++){
+    full[i].onclick = function(){
+      this.requestFullscreen();
+    }
+  }
+
+
   </script>
 </html>
